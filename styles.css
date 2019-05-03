@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Exo|Gugi|Trirong|Archivo');
+
+body {
+    display: grid;
+    grid-template: 100px auto / 150px auto;
+    grid-template-areas: "sidebar header" "sidebar main";
+    min-height: 100vh;
+    margin: 0 0;
+
+}
+
+nav {
+    width: 150px;
+    height: 100vh;
+    min-height: 450px;
+    overflow: auto;
+    grid-area: sidebar;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0 0 0;
+    position: fixed;
+}
+
+header {
+    grid-area: header;
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+    background-color: #CFDFF8;
+    min-height: 500px;
+    grid-template: minmax(500px, auto) / 64px auto 64px;
+    grid-template-areas: "back content forward"
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0 0;
+    padding: 0 0;
+    font-family: 'Gugi', sans-serif;
+    color: #E9E9E9;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+
+nav a {
+    font-family: 'Exo', sans-serif;
+    font-weight: bold;
+    font-size: 1.8em;
+    text-decoration: none;
+    color: #DDD;
+    padding: 15px 0 0 0;
+    text-align: justify;
+}
+
+nav a:visited, a:active {
+    color: #DDD;
+}
+
+nav a:hover {
+    color: #FFF;
+}
+
+.forward {
+    grid-area: forward;
+}
+
+.back {
+    grid-area: back;
+}
+
+.content {
+    grid-area: content;
+}
+
+main a {
+    margin: 0 0;
+    padding: 250px 0 0 0;
+}
+
+main a img {
+    width: auto;
+}
+
+article {
+    padding: 20px;
+}
+
+article img {
+    display: block;
+    width: 60%;
+    min-width: 300px;
+    margin: 10px auto;
+}
+
+article video {
+    display: block;
+    width: 60%;
+    min-width: 300px;
+    margin: 10px auto;
+}
+
+p {
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    font-size: 1.2em;
+}
